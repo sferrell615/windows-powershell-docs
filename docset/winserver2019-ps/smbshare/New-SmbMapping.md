@@ -28,7 +28,7 @@ Creates an SMB mapping.
 ```
 New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-UserName <String>] [-Password <String>]
  [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UseWriteThrough <Boolean>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -210,6 +210,21 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseWriteThrough
+This feature was added in Windows Server 2019 and Windows 10 version 1809.
+This parameter ensures that writes are completed prior to the write operation returning as completed. For more information, see [Features added in Windows Server 2019 and Windows 10, version 1809](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview#features-added-in-windows-server-2019-and-windows-10-version-1809).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
 Required: False
 Position: Named
 Default value: None
